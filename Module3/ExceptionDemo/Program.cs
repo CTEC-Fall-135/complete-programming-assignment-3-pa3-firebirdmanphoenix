@@ -12,6 +12,7 @@ namespace ExceptionDemo
             try
             {
                 GetInt(5);
+                //The line below is for testing other kinds of errors.
                 //Console.WriteLine(args[4]);
             }
             catch (DivideByZeroException e)
@@ -26,7 +27,7 @@ namespace ExceptionDemo
 
         static int GetInt(int x)
         {
-            return (x/0);
+            return (x/0); //Intentional divide by 0 error method
         }
     }
 }

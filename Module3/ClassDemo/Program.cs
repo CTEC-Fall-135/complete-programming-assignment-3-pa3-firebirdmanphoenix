@@ -1,7 +1,7 @@
 ﻿/*
 Author: Phoenix Vu
 Date: 10/18/2025
-Assignment: PA3
+Assignment: PA3, Task 1
 */
 
 
@@ -12,7 +12,7 @@ namespace ClassDemo
         //Fields
         private string name;
         private string address;
-        private int ID { get; set; }
+        private int ID { get; set; } //Automatic property usage
 
         //Method getter and setter
         public string GetName()
@@ -32,9 +32,10 @@ namespace ClassDemo
             set { address = value; }
         }
 
-        //Constructors
-
+        //Default Constructor
         public Student() : this("John Doe", "308 Negra Arroyo Lane", 00000000) {}
+
+        //Name Constructor
         public Student(string name) : this(name, "308 Negra Arroyo Lane", 00000000) {}
 
         //Primary Constructor
@@ -56,12 +57,15 @@ namespace ClassDemo
     {
         static void Main(string[] args)
         { 
+            //Testing primary constructor
             Student student1 = new Student("Arthur Morgan", "1984 Smth Street", 12345678);
             student1.PrintState();
 
+            //Testing name constructor
             Student student2 = new Student("John Marston");
             student2.PrintState();
 
+            //Testing default constructor
             Student student3 = new Student();
             student3.PrintState();
 
